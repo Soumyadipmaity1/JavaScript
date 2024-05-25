@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body style="background-color: black; color: aliceblue;">
+
+  <h1>Language</h1>
+  <ul class="language">
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+  </ul>
+  <!-- <button onclick="AddLanguage(langName)">Add Language</button>
+    <button onclick="document.querySelector('.language').lastElementChild.remove()">Remove Language</button> -->
+</body>
+
+
+<script>
+  function AddLanguage(langName) {
+    const li = document.createElement('li');
+    li.innerHTML = `${langName}`;
+    document.querySelector('.language').
+      appendChild(li);
+    // AddLanguage('Python');
+
+
+
+  }
+  AddLanguage('Python');
+  AddLanguage('Java');
+
+
+
+
+  function addOptimisedLanguage(langName) {
+    const li = document.createElement('li');
+    li.appendChild(document.createTextNode(langName));
+    document.querySelector('.language').appendChild(li);
+  }
+  addOptimisedLanguage('C++');
+  addOptimisedLanguage('C#');
+
+//edit the language
+  const secondLang = document.querySelector("li:nth-child(2)");
+  const newli = document.createElement('li');
+  newli.textContent = "Soumyadip";
+  secondLang.replaceWith(newli);
+
+  const firstLang = document.querySelector("li:first-child");
+  firstLang.outerHTML = "<li>Python</li>";
+
+  const ThirdLang = document.querySelector("li:nth-child(3)");
+  ThirdLang.innerHTML = "Maity";
+
+  //remove 
+
+  const lastLang = document.querySelector("li:last-child");
+  lastLang.remove();
+
+</script>
+
+</html>
