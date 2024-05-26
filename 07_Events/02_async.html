@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <h1>Soumyadip Maity</h1>
+    <button id="btn">Click Me</button>
+  </body>
+
+  <script>
+    // setTimeout(function () {
+    //   console.log("Hello Soumyadip");
+    // }, 3000);
+
+    const soumya= function(){
+      console.log("Hello Soumyadip");
+    }
+    setTimeout(soumya, 3000);
+
+const chanageText = function(){ 
+    document.querySelector('h1').innerHTML = "Hello Soumyadip";
+}
+// setTimeout(chanageText, 3000);
+
+const stop = setTimeout(chanageText, 3000);
+document.querySelector('#btn').addEventListener('click', function(){
+    clearTimeout(stop);
+});
+  </script>
+</html>
