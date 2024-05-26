@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body>
+    <div>
+        <ul id="main">
+            <li id="one" class="button">one</li>
+            <li id="two" class="button">two</li>
+            <li id="three" class="button">three</li>
+            <li id="four" class="button">four</li>
+        </ul>
+    </div>
+    <script>
+        document.querySelector('#main').addEventListener('click', function(e){
+            console.log(e.target.tagName);
+             e.target.remove();
+        });
+    </script>
+</body>
+</html>
